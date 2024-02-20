@@ -14,7 +14,7 @@ export class AppComponent {
   libri$: Observable<Libro[]> = new Observable();
   libro: Libro = { id: 0, tipo: '', titolo: '', autore: '' };
   id: number = 0;
-
+  navLinks=["home","libri","autori"]
   constructor(public datiService: DatiService) {
     this.libri$ = datiService.getLibri();
   }
